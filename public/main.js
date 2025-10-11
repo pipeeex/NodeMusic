@@ -49,6 +49,7 @@ async function descargar() {
             body: JSON.stringify(data),
         });
 
+        
         if (!res.ok) throw new Error("Error iniciando descarga");
 
         // ✅ En lugar de manejar el blob, abrimos una URL de descarga directa
