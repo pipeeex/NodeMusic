@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube MP3 Downloader</title>
+  <script defer src="main.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f4f4f4;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    #info {
+      white-space: pre-line;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Descargador MP3</h1>
+  <input id="url" type="text" placeholder="Pega el link de YouTube aquí" size="60">
+  <br>
+  <button onclick="obtenerMetadata()">Obtener información</button>
+  <div id="info"></div>
+  <div id="descargar"></div>
+</body>
+</html>
