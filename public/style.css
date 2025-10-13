@@ -184,7 +184,36 @@ body {
       width: 140px;
       height: 140px;
     }
+
+    .titulo-con-icono {
+        font-size: 1.2rem;
+        flex-direction: column; /* apila la imagen arriba del texto */
+      }
+    
+      .icono-titulo {
+        width: 30px;
+        height: 30px;
+      }
+
+
+  }
+  .titulo-con-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espacio entre el icono y el texto */
+    font-size: 1.7rem;
+    color: #58a6ff;
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
+    margin-bottom: 1.5rem;
   }
   
-
+  /* Ajusta el tamaño y estilo del icono */
+  .icono-titulo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
   
