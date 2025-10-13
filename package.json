@@ -4,7 +4,7 @@
   "description": "App para Descargar musica pq no quiero pagar spotifi",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start": "node server.js"
   },
   "author": "pipeex",
   "license": "ISC",
@@ -15,5 +15,6 @@
     "node-id3": "^0.2.9",
     "sanitize-filename": "^1.6.3",
     "uuid": "^13.0.0"
+    "yt-dlp-exec": "^2.0.0",
   }
 }
