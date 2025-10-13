@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import youtubedl from "yt-dlp-exec";
+import youtubedl from "youtube-dl-exec";
 import fs from "fs";
 import path from "path";
 import nodeID3 from "node-id3";
@@ -20,7 +20,11 @@ const OUTPUT_DIR = path.join(process.cwd(), "downloads");
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
 
 async function getVideoInfo(url) {
-  const info = await youtubedl(url, { dumpSingleJson: true });
+  const info = await youtubedl(url, {
+    dumpSingleJson: true,
+    noWarnings: true,
+    quiet: true
+  });
   return info;
 }
 
@@ -88,9 +92,16 @@ app.post("/download", async (req, res) => {
     const outputPath = path.join(OUTPUT_DIR, `${safeTitle}.mp3`);
 
     // 🎵 Descarga en máxima calidad (320kbps)
-    const command = `yt-dlp -f "bestaudio" -x --audio-format mp3 --audio-quality 0 -o "${outputPath}" "${url}"`;
-    console.log("🎧 Ejecutando:", command);
-    await execAsync(command);
+    await youtubedl(url, {
+      extractAudio: true,
+      audioFormat: "mp3",
+      audioQuality: "0", // máxima calidad
+      output: outputPath,
+      noCheckCertificates: true,
+      noWarnings: true,
+      preferFreeFormats: true,
+      addMetadata: true
+    });
 
     if (!fs.existsSync(outputPath)) {
       return res.status(404).json({ error: "Archivo no encontrado después de descarga" });
