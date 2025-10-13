@@ -3,7 +3,6 @@
 Aplicación web que permite **obtener metadatos de un video de YouTube** (título, artista, álbum, portada, etc.) y **descargar su audio en formato MP3** con toda esa información incrustada en el archivo final.
 
 > ⚠️ Este proyecto está en desarrollo.  
-> Aún falta agregar estilos (CSS) y optimizar algunas funciones del backend y frontend.
 
 ---
 
@@ -29,10 +28,6 @@ Aplicación web que permite **obtener metadatos de un video de YouTube** (títul
 ---
 
 ##  Pendiente por mejorar
-
-- 🎨 Agregar estilos CSS para mejorar la interfaz.
-
-- ⚡ Optimizar manejo de peticiones (mostrar progreso, loading states, etc.).
 
 - 🧹 Borrar archivos temporales después de enviarlos.
 
