@@ -1,8 +1,4 @@
-const API =
-  window.location.hostname === "localhost"
-    ? "http://localhost:3000"
-    : "https://nodemusic-2bck.onrender.com";
-; // cambia si usas otro dispositivo
+const API = "http://192.168.1.13:3000"; // cambia si usas otro dispositivo
 
 function mostrarLoader(texto) {
     const loader = document.getElementById("loader-container");
