@@ -1,0 +1,190 @@
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background: #161b22;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    color: #58a6ff;
+    margin-bottom: 1.5rem;
+  }
+    /* 🔍 Input + botón */
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+
+  /* 🔘 Input con botón borrar */
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  #clear-btn {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s;
+  }
+  
+  #clear-btn:hover {
+    color: #f85149;
+    transform: scale(1.2);
+  }
+
+  utton#get-info-btn {
+    background: linear-gradient(90deg, #238636, #2ea043);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.4s ease, transform 0.2s, box-shadow 0.3s ease;
+  }
+  
+  button#get-info-btn:hover {
+    background: linear-gradient(90deg, #2ea043, #3fb950);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(63, 185, 80, 0.5);
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #58a6ff;
+  }
+  
+  button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #2ea043;
+    transform: scale(1.03);
+  }
+  
+  /* 🧭 Contenedor del loader */
+  
+  .loader-text {
+    margin-bottom: 0.5rem;
+    color: #8b949e;
+  }
+  .loader-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 12px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #58a6ff, #2ea043);
+    border-radius: 8px;
+    transition: width 0.2s linear;
+  }
+  
+  .progress-percent {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+  
+  
+  .info-box {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+  }
+  
+  .info-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #30363d;
+  }
+  
+  .info-box h2 {
+    color: #58a6ff;
+    margin: 0.5rem 0;
+  }
+  
+  .info-box p {
+    color: #8b949e;
+    margin: 0.3rem 0;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 1.5rem;
+    }
+    h1 {
+      font-size: 1.2rem;
+    }
+    input, button {
+      font-size: 0.9rem;
+    }
+    .info-box img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+  
+
+  

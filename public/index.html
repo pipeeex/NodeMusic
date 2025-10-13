@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <title>YouTube MP3 Downloader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midescargador de Música</title>
+  <link rel="stylesheet" href="style.css" />
   <script defer src="main.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background: #f4f4f4;
-    }
-    input, button {
-      padding: 8px;
-      margin: 5px 0;
-      font-size: 16px;
-    }
-    #info {
-      white-space: pre-line;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
 
 <body>
-  <h1>🎵 Descargador MP3</h1>
-  <input id="url" type="text" placeholder="Pega el link de YouTube aquí" size="60">
-  <br>
-  <button onclick="obtenerMetadata()">Obtener información</button>
-  <div id="info"></div>
-  <div id="descargar"></div>
+  <div class="container">
+    <h1>🎵 Manin descargue su música y no pague Spoti Premium</h1>
+
+    <div class="input-group">
+      <input id="url" type="text" placeholder="Pega el link de YouTube aquí" size="60">
+      <button id="clear-btn" title="Borrar URL">✖</button>
+      <button id ="get-info-btn" onclick="obtenerMetadata()">Obtener información</button>
+      <div id="loader-container" class="loader-container" style="display:none;">
+        <p id="loader-text" class="loader-text">Procesando...</p>
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+        <p id="progress-percent" class="progress-percent"></p>
+        
+      </div>
+    </div>
+
+    <div id="info" class="info-box"></div>
+
+  </div>
+
 </body>
+
 </html>
