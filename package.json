@@ -9,11 +9,11 @@
   "author": "pipeex",
   "license": "ISC",
   "dependencies": {
+    "uuid": "^13.0.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "multer": "^2.0.2",
     "node-id3": "^0.2.9",
-    "sanitize-filename": "^1.6.3",
-    "uuid": "^13.0.0"
+    "sanitize-filename": "^1.6.3"
   }
 }
