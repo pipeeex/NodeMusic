@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { exec } from "child_process";
-import { promisify } from "util";
+import youtubedl from "yt-dlp-exec";
 import fs from "fs";
 import path from "path";
 import nodeID3 from "node-id3";
@@ -9,7 +8,6 @@ import os from "os";
 import sanitize from "sanitize-filename";
 
 const app = express();
-const execAsync = promisify(exec);
 const PORT = 3000;
 
 app.use(cors());
@@ -20,8 +18,8 @@ const OUTPUT_DIR = path.join(process.cwd(), "downloads");
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
 
 async function getVideoInfo(url) {
-  const { stdout } = await execAsync(`yt-dlp -j "${url}"`);
-  return JSON.parse(stdout);
+  const info = await youtubedl(url, { dumpSingleJson: true });
+  return info;
 }
 
 // 🎵 Obtener metadata
