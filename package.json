@@ -14,7 +14,7 @@
     "multer": "^2.0.2",
     "node-id3": "^0.2.9",
     "sanitize-filename": "^1.6.3",
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
     "yt-dlp-exec": "^2.0.0",
   }
 }
