@@ -14,7 +14,6 @@
     "multer": "^2.0.2",
     "node-id3": "^0.2.9",
     "sanitize-filename": "^1.6.3",
-    "uuid": "^13.0.0",
-    "youtube-dl-exec": "^3.0.25"
+    "uuid": "^13.0.0"
   }
 }
